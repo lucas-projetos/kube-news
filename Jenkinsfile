@@ -23,7 +23,7 @@ pipeline{
 
         stage('Deploy Kubernetes'){
             environment{
-                tah_version ="${env.BUILD_id}"
+                tag_version ="${env.BUILD_id}"
             }
             steps{
                withKubeConfig([credentialsId: 'kubeconfig']){
